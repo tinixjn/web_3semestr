@@ -1,0 +1,214 @@
+/* палітра
+#baacd8 фіолетовий
+#9bbad4 синій
+#bfe4e5 блакитний
+#dee7ca зелений
+#F9D8D6 рожевий
+#F9EBDF персиковий
+*/
+
+* {
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+
+.header
+{
+    background-color: #bfe4e5;
+}
+.main
+{
+    display: flex;
+    gap: 4.8%;
+    flex-grow: 1; 
+}
+.footer
+{
+    background-color: #F9D8D6;
+    
+    display: flex;           
+    align-items: center;
+    justify-content: space-between;
+}
+.info_header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+}
+.menu
+{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f4e3a7;
+    align-items: center;
+}
+.menu_column
+{
+    width: 150px;
+    text-align: center;
+}
+.menu_column a {
+    color: inherit;
+    text-decoration: none;
+}
+.menu_column:hover
+{
+    border: 1px solid black;
+    color: #5e7037;
+}
+.inscription_X
+{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    background-color: #dee7ca;
+    max-width: 27.7%;
+    border: 1px double #8da854;
+    padding: 10px;
+    margin: 20px;
+    color: #5e7037;
+}
+.title
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: purple;
+    font-style:oblique;
+    font-size: larger;
+    text-align: center;
+    margin-left: 20px;
+    max-width: 60%;
+}
+.inscription_Y
+{
+    width: 27.7%;
+    margin: 20px;
+    font-style: oblique;
+    font-size: 80%;
+    color: black;
+}
+.md_left
+{
+    display: flex;
+    flex-direction: column;
+    width: 49.5%;
+    flex-grow: 1;
+    height: 100%;
+    flex-wrap: wrap; 
+}
+.md_right
+{
+    display: flex;
+    flex-direction: row;
+    width: 45.7%;
+    gap: 11%;
+    flex-wrap: wrap; 
+}
+.col_part
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    flex: 65 0 auto; 
+}
+.row_part
+{
+    background-color: #9bbad4;
+    border-top: 1px solid beige;
+    padding: 20px;
+    display: flex;
+    flex: 35 0 auto;
+    align-items: center;
+}
+.row_part img {
+    width: 40%;
+    max-height: 200px;
+}
+.column1
+{
+    width: 49%;
+    flex-grow: 1;
+}
+.column2
+{
+    width: 41%;
+    flex-grow: 1;
+}
+.column2 img
+{
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.column{
+    width: 44.5%;
+}
+.column img
+{
+    max-width: 100%;
+}
+.quote
+{
+    text-align: left;
+}
+.author
+{
+    text-align: right;
+}
+.footer_logo img {
+    margin-right: 20px;
+    max-height: 130px;  
+    max-width: 100%;    
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+.col
+{
+    padding: 10px;
+    background-color: #baacd8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right; 
+    overflow-wrap: break-word;
+    word-break: break-word; 
+}
+.col img {
+    display: block;      
+    width: 100%; 
+    margin-left: auto;    
+    margin-right: 0;      
+}
+.col p
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.column1 img
+{
+    width: 90%; 
+    padding-top: 10px;
+}
+ul, ol {
+    margin: 0;     
+    padding-left: 20px; 
+}

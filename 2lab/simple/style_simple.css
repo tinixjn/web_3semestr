@@ -1,0 +1,228 @@
+/* палітра
+#baacd8 фіолетовий
+#9bbad4 синій
+#bfe4e5 блакитний
+#dee7ca зелений
+#F9D8D6 рожевий
+#F9EBDF персиковий
+*/
+
+* {
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: beige;
+}
+
+.header {
+    background-color: #bfe4e5;
+}
+.main {
+    display: table;
+    height: 100%;
+}
+.footer {
+    background-color: #F9D8D6;
+    overflow: hidden;
+    padding: 10px;
+}
+.info_header {
+    min-height: 150px;
+    overflow: hidden;
+    line-height: 150px;
+}
+.menu {
+    background-color: #f4e3a7;
+    display: table;
+    width: 100%;
+}
+.menu_column {
+    display: table-cell;
+    width: 150px;
+    text-align: center;
+}
+.menu_column a {
+    color: inherit;
+    text-decoration: none;
+}
+.menu_column:hover {
+    border: 1px solid black;
+    color: #5e7037;
+}
+
+.inscription_X {
+    float:right;
+    text-align: right;
+    background-color: #dee7ca;
+    max-width: 27.7%;
+    border: 1px double #8da854;
+    padding: 10px;
+    margin: 20px 20px 20px 0px;
+    color: #5e7037;
+}
+.inscription_X h2{
+    margin: 20px 0px;
+    padding: 0px;
+    line-height: 1.2;
+}
+
+.title {
+    float: left;
+    display: table;
+    margin: 30px;
+    max-width: 50%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: purple;
+    font-style: oblique;
+    table-layout: fixed;
+    font-size: larger;
+    text-align: left;
+    line-height: normal;
+}
+.title img {
+    display: table-cell;
+    width: 60px;      
+    vertical-align: middle;
+}
+
+.title h1 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10px;
+    white-space: normal; 
+}
+.inscription_Y {
+    float: left;
+    max-width: 27.7%;
+    margin: 20px;
+    font-style: oblique;
+    font-size: 80%;
+    color: black;
+}
+
+.md_left {
+    display: table; 
+    display: table-cell;
+    width: 49.5%;
+    height: 100%;
+    border-right: 40px solid beige;
+}
+.md_right {
+    display: table; 
+    height: 100%;
+}
+.md_right > .column:last-child
+{
+    border-left: 40px solid beige;
+    vertical-align: middle;
+}
+
+.col_part {
+    display: table-row;
+    width: 100%;
+    border-collapse: separate;  
+    height: 65%;
+}
+.row_part {
+    display: table;
+    background-color: #9bbad4;
+    border-top: 1px solid beige;
+    width: 100%;  
+    height: 35%;
+    vertical-align: middle;
+}
+.row_part p {
+    margin: 0;
+    line-height: 1.4;
+}
+.row_part img {
+    width: 100%;
+    max-height: 200px;
+    padding: 20px;
+}
+
+.column1 {
+    display: table-cell;
+    width: 49%;
+    border-right: 40px solid beige;
+    vertical-align: middle;
+}
+.column2 {
+    display: table-cell;
+    width: 41%;
+    
+}
+.column2 img {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.column {
+    display: table-cell;
+    width: 44.5%;
+    min-height: 100%;
+    
+}
+.column img {
+    max-width: 100%;
+}
+.quote {
+    text-align: left;
+}
+.author {
+    text-align: right;
+}
+
+.footer_logo img {
+    float: right;
+    margin-right: 20px;
+    max-height: 130px;  
+    max-width: 100%;    
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.col {
+    padding: 10px;
+    background-color: #baacd8;
+    text-align: right; 
+    overflow: hidden;
+    min-height: 100%;
+    
+}
+.col img {
+    display: block;      
+    width: 100%; 
+    margin-left: auto;    
+    margin-right: 0;      
+}
+.col p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.column1 img {
+    width: 90%; 
+    padding-top: 10px;
+}
+ul, ol {
+    margin: 0;     
+    padding-left: 20px; 
+}
+.text_row
+{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+}

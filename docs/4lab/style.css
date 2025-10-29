@@ -1,0 +1,149 @@
+html {
+    height: 100%;
+    margin: 0px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+body {
+    min-height: 100%;
+    background-color: #8ab5c5;
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    gap: 20px;
+}
+
+h1 {
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    margin: 5px 0px;
+}
+p {
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: 550;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.text {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first_row,
+.second_row {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cell {
+    border: 1px solid white;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.change {
+    background-color: white;
+}
+.change p {
+    color: #8a98c9;
+}
+.change h1 {
+    color: #8ab5c5;
+}
+.photo{
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 400px; 
+}
+.photo img:first-child{
+    border: 4px solid white;
+    position: static;
+    width: 85%;
+    height: 55%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.photo img:last-child{
+    border: 4px solid white;
+    position: static;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%; 
+    height: 55%;
+    z-index: 3;
+}
+
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+        margin: 0px;
+        padding: 40px 16.6%;
+    }
+
+    .text {
+        width: 50%;
+        /* flex-grow: 1; */
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .photo {
+        width: 50%;
+        flex-grow: 1;
+        height: auto;
+        position: relative;
+    }
+    
+    .first_row, 
+    .second_row {
+        /* min-height: 48%; */
+        
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: stretch;
+    }
+
+    .photo img:first-child {
+        position: absolute; 
+        top: 0;
+        left: 0; 
+        height: 53%;
+        z-index: 2;
+    }
+
+    .photo img:last-child {
+        position: absolute;
+        bottom: 0;
+        right: 0; 
+        height: 53%; 
+        z-index: 3;
+    }
+
+    .cell{
+        width: 50%;
+    }
+}

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*5 task*/
 document.addEventListener("DOMContentLoaded", () => {
     const blocks = [
-        {id:1, el: document.querySelector(".info_header .title")},
+        {id:1, el: document.querySelector(".info_header")},
         {id:2, el: document.querySelector(".md_left .col_part .column1")},
         {id:3, el: document.querySelector(".md_left .col_part .column2")},
         {id:4, el: (function(){ const r=document.querySelector(".md_right"); return r ? r.querySelectorAll(".col.column")[0] : null; })()},

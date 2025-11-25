@@ -1,0 +1,488 @@
+/* палітра
+#baacd8 фіолетовий
+#9bbad4 синій
+#bfe4e5 блакитний
+#dee7ca зелений
+#F9D8D6 рожевий
+#F9EBDF персиковий
+*/
+
+* {
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+
+.header {
+    background-color: #bfe4e5;
+}
+
+.main {
+    display: flex;
+    gap: 4.8%;
+    flex-grow: 1; 
+}
+
+.footer {
+    background-color: #F9D8D6;
+    display: flex;           
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f4e3a7;
+    align-items: center;
+}
+
+.menu_column {
+    width: 150px;
+    text-align: center;
+}
+
+.menu_column a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu_column:hover {
+    border: 1px solid black;
+    color: #5e7037;
+}
+
+.inscription_X {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    background-color: #dee7ca;
+    max-width: 27.7%;
+    border: 1px double #8da854;
+    padding: 10px;
+    margin: 20px;
+    color: #5e7037;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: purple;
+    font-style: oblique;
+    font-size: larger;
+    text-align: center;
+    margin-left: 20px;
+    max-width: 60%;
+}
+
+.inscription_Y {
+    width: 27.7%;
+    margin: 20px;
+    font-style: oblique;
+    font-size: 80%;
+    color: black;
+}
+
+.md_left {
+    display: flex;
+    flex-direction: column;
+    width: 49.5%;
+    flex-grow: 1;
+    height: 100%;
+    flex-wrap: wrap; 
+}
+
+.md_right {
+    display: flex;
+    flex-direction: row;
+    width: 45.7%;
+    gap: 11%;
+    flex-wrap: wrap; 
+}
+
+.col_part {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    flex: 65 0 auto; 
+}
+
+.row_part {
+    background-color: #9bbad4;
+    border-top: 1px solid beige;
+    padding: 20px;
+    display: flex;
+    flex: 35 0 auto;
+    align-items: center;
+}
+
+.row_part img {
+    width: 40%;
+    max-height: 200px;
+}
+
+.column1 {
+    width: 49%;
+    flex-grow: 1;
+}
+
+.column2 {
+    width: 41%;
+    flex-grow: 1;
+}
+
+.column2 img {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.column {
+    width: 44.5%;
+}
+
+.column img {
+    max-width: 100%;
+}
+
+.quote {
+    text-align: left;
+}
+
+.author {
+    text-align: right;
+}
+
+.footer_logo img {
+    margin-right: 20px;
+    max-height: 130px;  
+    max-width: 100%;    
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.col {
+    padding: 10px;
+    background-color: #baacd8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right; 
+    overflow-wrap: break-word;
+    word-break: break-word; 
+}
+
+.col img {
+    display: block;      
+    width: 100%; 
+    margin-left: auto;    
+    margin-right: 0;      
+}
+
+.col p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.column1 img {
+    width: 90%; 
+    padding-top: 10px;
+}
+
+ul, ol {
+    margin: 0;     
+    padding-left: 20px; 
+}
+
+.collapse-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: background 0.15s ease, transform 0.08s ease;
+}
+.collapse-item:hover { background: #f1f1f1; }
+
+.collapse-title-input,
+.collapse-content-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.collapse-content-input {
+    margin-top: 8px;
+    min-height: 70px;
+    resize: vertical;
+}
+
+.collapse-delete-btn {
+    margin: 8px;
+    padding: 6px 12px;
+    background: #d9534f;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.collapse-delete-btn:hover { background: #c9302c; }
+
+#collapse-form-container {
+    margin-top: 8px;
+}
+
+#collapse-form-container > div {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#collapse-form-container input[type="text"],
+#collapse-form-container textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#collapse-form-container textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+#message-container {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #2d7a2d;
+}
+
+.form-button {
+    padding: 8px 14px;
+    border: none;
+    background: #2a7ae2;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.form-button:hover { background: #1f62c7; }
+
+.save-button {
+    background: #28a745;
+}
+.save-button:hover { background: #218838; }
+
+.list-placeholder ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list-placeholder ul li {
+    padding: 8px;
+}
+.list-placeholder ul li:nth-child(odd) {
+    background-color: #222; 
+    color: #fff;
+}
+.list-placeholder ul li:nth-child(even) {
+    background-color: #fff;
+    color: #000;
+}
+
+.collapse-wrap {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.collapse-header {
+    background-color: #bfe4e5; 
+    padding: 12px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapse-header.open {
+    background-color: #9bbad4; 
+}
+
+.collapse-header:after {
+    content: "▾";
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+.collapse-header.open:after {
+    transform: rotate(180deg);
+}
+
+.collapse-content {
+    background-color: #F9EBDF; 
+    padding: 12px 14px;
+    display: none; 
+    color: #222;
+    line-height: 1.45;
+}
+
+.collapse-content.open {
+    display: block;
+}
+
+.collapse-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 8px 0;
+}
+.collapse-content ul, .collapse-content ol {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .info_header {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu_column {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 2px 0;
+        font-size: 14px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .md_left {
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .md_right {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .col_part {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row_part {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row_part img {
+        max-width: 80%;
+        max-height: 100%;
+        padding-top: 10px;
+    }
+
+    .inscription_X {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .inscription_Y {
+        width: 100%;
+        margin: 10px;
+        padding: 0px 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer_logo img {
+        max-height: 100px;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin-left: 0;
+        max-width: 100%;
+        font-size: large;
+    }
+
+    .column1, .column2, .column {
+        width: 100%;
+    }
+
+    .col {
+        text-align: center;
+    }
+
+    .collapse-title-input, .collapse-content-input {
+        padding: 6px;
+        font-size: 13px;
+    }
+    .form-button {
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .collapse-header {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    .collapse-content {
+        padding: 10px 12px;
+    }
+}

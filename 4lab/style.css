@@ -76,11 +76,16 @@ p {
     position: relative;
     height: 400px; 
 }
+.photo img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+
 .photo img:first-child{
     border: 4px solid white;
     position: static;
-    width: 85%;
-    height: 55%;
     position: absolute; 
     top: 0;
     left: 0;
@@ -92,8 +97,6 @@ p {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 85%; 
-    height: 55%;
     z-index: 3;
 }
 

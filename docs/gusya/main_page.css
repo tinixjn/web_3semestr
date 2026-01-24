@@ -313,6 +313,6 @@ body {
     }
     /* чеклист */
     .check {
-        padding: 5px 5%;
+        padding: 5px 0;
     }
 }

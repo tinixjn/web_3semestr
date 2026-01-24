@@ -276,6 +276,7 @@ body {
 .garlands-mobile {
     display: none;
 }
+
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
 
@@ -310,6 +311,10 @@ body {
     .garland::before {
         top: -60px;
         height: 70px;
+    }
+    .checklist
+    {
+        padding: 10px 10px;
     }
     /* чеклист */
     .check {

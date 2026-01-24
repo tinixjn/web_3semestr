@@ -273,32 +273,46 @@ body {
     margin-bottom: 10px;
 }
 
-
+.garlands-mobile {
+    display: none;
+}
 /* ===== АДАПТИВ ===== */
-
 @media (max-width: 768px) {
 
-    .main-greeting {
-        padding: 30px 5%;
-        gap: 40px;
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .title {
-        flex-direction: column;
-        text-align: center;
+    .main-greeting {
+        padding: 20px 4%;
+    }
+
+    /* === ГІРЛЯНДИ === */
+    .garlands-desktop {
+        display: none;
+    }
+
+    .garlands-mobile {
+        display: block;
     }
 
     .garland {
-        flex-wrap: wrap;
-        gap: 15px;
+        max-width: 100%;
+        gap: 20px;
+        margin: 45px auto;
     }
 
-    .garland img {
-        width: 100px;
-        height: 140px;
+    .polaroid {
+        width: 42%;
     }
 
-    .final_block {
-        font-size: 1em;
+    .garland::before {
+        top: -60px;
+        height: 70px;
+    }
+    /* чеклист */
+    .check {
+        padding: 5px 5%;
     }
 }

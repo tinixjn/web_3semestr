@@ -316,6 +316,14 @@ body {
     {
         padding: 10px 10px;
     }
+    .checklist ul {
+    text-align: left;
+    display: inline-block;
+}
+    .checklist li {
+    display: flex;
+    align-items: flex-start;
+    }
     /* чеклист */
     .check {
         padding: 5px 0;

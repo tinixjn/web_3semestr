@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З днем народження 💗</title>
+    <link rel="stylesheet" href="main_page.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER (залишаємо тільки напис) ===== -->
+<header class="header">
+    <div class="info_header">
+        <div class="title">
+            <img src="images/blueberry.gif" alt="sticker" height="100">
+            <h1>З днем народження</h1>
+            <img src="images/strawberry.gif" alt="sticker" height="60">
+        </div>
+    </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main class="main main-greeting">
+
+    <!-- ПРИВІТАННЯ -->
+    <section class="text_greeting">
+        <h2>Гусічка 💗</h2>
+
+        <p>
+            Я неймовірно вдячна за те, що ти є в моєму житті. 
+        </p>
+        <p>
+            Бажаю тобі кожного дня відчувати справжнє щастя та внутрішній спокій. 
+        </p>
+        <p>
+            Нехай твоє серце завжди буде наповнене теплом, а всі найсміливіші мрії здійснюються легко та вчасно. 
+        </p>
+        <p>
+            Ти заслуговуєш на найкраще, тому нехай поруч завжди будуть люблячі люди та яскраві події. 
+        </p>
+        <p>
+            Залишайся такою ж чудовою людиною, яка прикрашає цей світ своєю присутністю.
+        </p>
+    </section>
+
+    <!-- ВІДЕО -->
+    <section class="video_block">
+        <h2>Трохи наших моментів 💫</h2>
+
+        <video controls poster="images/video_preview.jpg">
+            <source src="images/video.mp4" type="video/mp4">
+            Твій браузер не підтримує відео.
+        </video>
+
+    </section>
+
+    <!-- ===== НАШ 2025 ===== -->
+    <section class="year2025">
+
+        <!-- ЧЕКЛИСТ -->
+        <div class="checklist">
+    <h3>Чи зробили ми це разом у 2025? 💌</h3>
+    <div class="check">
+        <ul>
+            <li>
+                <input type="checkbox">
+                <span>Перший самостійний візит в Київ</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Поплавали на кораблику</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Переїзд в інше місто</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Подорож кордону</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Сходили на книжкову країну</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Ходили на цікаві лекції/обговорення</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Святкували Гелоувін</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Побачили зимову країну</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="secret" id="secret">
+    <p>
+✔ 2025 — зроблено  
+</p>
+<p>
+⏳ 2026 — пишемо разом
+</p>
+
+
+        </div>
+
+
+
+        <h2>Наш 2025 ✨</h2>
+
+        <!-- ГІРЛЯНДА 1 -->
+        <div class="garland garland-right">
+            <div class="polaroid">
+                <img src="images/1.jpg">
+                <span>16.02.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/2.jpg">
+                <span>26.01.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/3.jpg">
+                <span>23.12.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/4.jpg">
+                <span>19.12.2025</span>
+            </div>
+        </div>
+
+        <div class="garland garland-left">
+            <div class="polaroid">
+                <img src="images/5.jpg">
+                <span>15.12.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/6.jpg">
+                <span>02.11.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/7.jpg">
+                <span>26.10.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/8.jpg">
+                <span>30.09.2025</span>
+            </div>
+        </div>
+
+        <div class="garland garland-right">
+            <div class="polaroid">
+                <img src="images/9.jpg">
+                <span>21.09.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/10.jpg">
+                <span>08.08.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/11.jpg">
+                <span>07.06.2025</span>
+            </div>
+            <div class="polaroid">
+                <img src="images/12.jpg">
+                <span>22.02.2025</span>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- ФІНАЛЬНИЙ БЛОК -->
+    <section class="final_block">
+        <p>
+            Обіцяю берегти ці спогади і створювати нові ✨
+        </p>
+    </section>
+
+</main>
+<footer>
+
+</footer>
+<canvas id="confetti-canvas"></canvas>
+<script>
+const canvas = document.getElementById("confetti-canvas");
+const ctx = canvas.getContext("2d");
+
+let confetti = [];
+let animationId;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+function randomColor() {
+    const colors = ["#FFAAB8", "#FFD8DF", "#A8DF8E", "#3A6F43", "#F0FFDF"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function createConfetti() {
+    confetti = [];
+    for (let i = 0; i < 180; i++) {
+        confetti.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * -canvas.height,
+            r: Math.random() * 6 + 4,
+            d: Math.random() * 10 + 5,
+            color: randomColor(),
+            tilt: Math.random() * 10 - 10
+        });
+    }
+}
+
+function drawConfetti() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    confetti.forEach(c => {
+        ctx.beginPath();
+        ctx.fillStyle = c.color;
+        ctx.fillRect(c.x, c.y, c.r, c.r * 1.4);
+    });
+
+    updateConfetti();
+}
+
+function updateConfetti() {
+    confetti.forEach(c => {
+        c.y += c.d * 0.6;
+        c.x += Math.sin(c.tilt);
+
+        if (c.y > canvas.height) {
+            c.y = -20;
+            c.x = Math.random() * canvas.width;
+        }
+    });
+}
+
+function startConfetti() {
+    createConfetti();
+    if (!animationId) {
+        (function animate() {
+            drawConfetti();
+            animationId = requestAnimationFrame(animate);
+        })();
+    }
+
+    setTimeout(stopConfetti, 4500);
+}
+
+function stopConfetti() {
+    cancelAnimationFrame(animationId);
+    animationId = null;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+</script>
+<script>
+const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+const secret = document.getElementById('secret');
+let confettiPlayed = false;
+
+function checkAll() {
+    const allChecked = [...checkboxes].every(cb => cb.checked);
+
+    secret.classList.toggle('show', allChecked);
+
+    if (allChecked && !confettiPlayed) {
+        startConfetti();
+        confettiPlayed = true;
+    }
+
+    if (!allChecked) {
+        confettiPlayed = false;
+    }
+}
+
+checkboxes.forEach(cb => {
+    cb.addEventListener('change', checkAll);
+});
+</script>
+
+</body>
+</html>

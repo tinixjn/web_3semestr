@@ -1,0 +1,304 @@
+/* палітра
+#3A6F43 темно зелений
+#A8DF8E зелений
+#F0FFDF світло зелений
+#FFD8DF світло рожевий
+#FFAAB8 рожевий
+*/
+
+/* ===== БАЗА ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #F0FFDF;
+    color: #3A6F43;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+    background-color: #FFD8DF;
+    padding: 20px 10px;
+}
+
+.info_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-style: oblique;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.title h1 {
+    margin: 0;
+}
+
+/* ===== MAIN ===== */
+
+.main-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 8%;
+}
+
+#confetti-canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+/* ===== ПРИВІТАННЯ ===== */
+
+.text_greeting {
+    max-width: 800px;
+    text-align: center;
+}
+
+.text_greeting h2 {
+    margin-bottom: 15px;
+}
+
+.text_greeting p {
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* ===== ВІДЕО ===== */
+
+.video_block {
+    width: 100%;
+    text-align: center;
+}
+
+.video_block video {
+    width: 100%;
+    max-width: 720px;
+    min-height: 400px;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.video_block h2 {
+    color: #FFAAB8;
+}
+
+.video_note {
+    margin-top: 10px;
+    font-style: oblique;
+}
+
+/* ===== 2025 ===== */
+
+.year2025 {
+    width: 100%;
+    text-align: center;
+
+}
+
+.year2025 h2 {
+    margin-bottom: 40px;
+}
+
+/* ===== ГІРЛЯНДИ ===== */
+
+.garland {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    gap: 30px;
+    margin: 60px auto;
+    position: relative;
+}
+
+/* мотузка */
+.garland::before {
+    content: "";
+    position: absolute;
+    top: -90px; /* трохи підніміть, щоб дуга була над фото */
+    left: 0;
+    right: 0;
+    height: 100px;
+    border-bottom: 3px solid #3A6F43; /* малюємо лінію знизу */
+    border-radius: 0 0 50% 50%; /* створюємо плавне провисання */
+    transform: rotate(0deg); /* це важливо: скасовуємо нахил батька для мотузки */
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* напрямки */
+.garland-right {
+    transform: rotate(5deg);
+}
+
+.garland-left {
+    transform: rotate(-5deg);
+}
+
+/* палароїд */
+.polaroid {
+    background-color: white;
+    width: 140px;
+    padding: 10px 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* квадратне фото */
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* дата */
+.polaroid span {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3A6F43;
+    font-style: oblique;
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+.polaroid:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.polaroid::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 15px;
+    background-color: #FFAAB8;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+
+
+/* ===== ЧЕКЛИСТ ===== */
+
+.checklist {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFD8DF;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.check {
+    padding: 5px 28%;
+}
+
+.checklist h3 {
+    margin: 0;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+/* ===== ФІНАЛ ===== */
+
+.final_block {
+    text-align: center;
+    font-style: oblique;
+    font-size: 1.1em;
+    padding: 20px 50px;
+    background-color: #A8DF8E;
+    border-radius: 30px;
+}
+
+.secret {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #FFAAB8;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+
+    transition: all 0.5s ease;
+}
+
+.secret.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.secret-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+
+    .main-greeting {
+        padding: 30px 5%;
+        gap: 40px;
+    }
+
+    .title {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .garland {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .garland img {
+        width: 100px;
+        height: 140px;
+    }
+
+    .final_block {
+        font-size: 1em;
+    }
+}
